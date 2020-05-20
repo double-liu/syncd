@@ -1,6 +1,6 @@
 #!/bin/bash
 
-syncd_remote_repo=https://github.com/dreamans/syncd.git
+syncd_remote_repo=https://github.com/double-liu/syncd.git
 syncd_repo_path=$HOME/.syncd-repo
 syncd_install_path=$( cd `dirname $0`; pwd )/syncd-deploy
 
