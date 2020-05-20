@@ -123,7 +123,7 @@ func (srv *Server) deployCmd() []string {
 	cmds = append(
 		cmds,
 		fmt.Sprintf(
-			"/usr/bin/env ssh -o StrictHostKeyChecking=no %s %s %s@%s 'cd %s; tar -zxf %s -C %s; del %s'",
+			"/usr/bin/env ssh -o StrictHostKeyChecking=no %s %s %s@%s 'cd %s && D:; tar -zxf %s -C %s; del %s'",
 			useCustomKey,
 			useSshPort,
 			srv.User,
