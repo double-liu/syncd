@@ -87,15 +87,15 @@ func (srv *Server) deployCmd() []string {
 	}
 
 	cmds = append(cmds, []string{
-		fmt.Sprintf(
-			"/usr/bin/env ssh -o StrictHostKeyChecking=no %s %s %s@%s 'mkdir -p %s; mkdir -p %s'",
-			useCustomKey,
-			useSshPort,
-			srv.User,
-			srv.Addr,
-			srv.DeployTmpPath,
-			srv.DeployPath,
-		),
+		// fmt.Sprintf(
+		// 	"/usr/bin/env ssh -o StrictHostKeyChecking=no %s %s %s@%s 'mkdir -p %s; mkdir -p %s'",
+		// 	useCustomKey,
+		// 	useSshPort,
+		// 	srv.User,
+		// 	srv.Addr,
+		// 	srv.DeployTmpPath,
+		// 	srv.DeployPath,
+		// ),
 		fmt.Sprintf(
 			"/usr/bin/env scp -o StrictHostKeyChecking=no -q %s %s %s %s@%s:%s/",
 			useCustomKey,
